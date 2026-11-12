@@ -134,3 +134,25 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# TanStack Start and Nitro build output
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+
+# Cloudflare generated files
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Vite build output
+dist/
+dist-ssr/
+
+# Environment variables and secrets
+.env.*
+!.env.example
+
+# Local credentials
+*.local
