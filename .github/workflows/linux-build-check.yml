@@ -1,0 +1,34 @@
+
+name: Linux Production Build Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install matching npm version
+        run: npm install --global npm@10.9.2
+
+      - name: Verify versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Clean dependency installation
+        run: npm ci --include=optional
+
+      - name: Production build
+        run: npm run build
