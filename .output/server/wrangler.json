@@ -1,11 +1,11 @@
 {
-  "compatibility_date": "2026-11-12",
+  "compatibility_date": "2026-11-13",
   "main": "index.mjs",
   "assets": {
     "binding": "ASSETS",
     "directory": "..\\public"
   },
-  "name": "vaishnav-developer-portfolio",
+  "name": "11void11-vaishnav-developer-portfolio-main",
   "compatibility_flags": [
     "nodejs_compat"
   ],
